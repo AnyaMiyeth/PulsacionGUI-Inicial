@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PulsacionesGUI.Properties
+namespace PulsacionGUI.Properties
 {
 
 

@@ -10,6 +10,14 @@ namespace Entity
     {
         public string Identificacion { get; set; }
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string NombreCompleto 
+        { 
+            get 
+            { 
+                return Nombre + "" + Apellido;
+            } 
+        }
         public string Sexo { get; set; }
         public int Edad{ get; set; }
         public decimal Pulsacion { get; set; }

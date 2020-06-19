@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{8769FD58-35CB-40F8-863F-859FB6FA506B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulsacionesGUI", "PulsacionesGUI\PulsacionesGUI.csproj", "{65E74E13-9908-49A0-8297-B0CC1988699D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulsacionGUI", "PulsacionGUI\PulsacionGUI.csproj", "{15969E2C-F786-4295-AF2F-21D7176AEF55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{8769FD58-35CB-40F8-863F-859FB6FA506B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8769FD58-35CB-40F8-863F-859FB6FA506B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8769FD58-35CB-40F8-863F-859FB6FA506B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65E74E13-9908-49A0-8297-B0CC1988699D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65E74E13-9908-49A0-8297-B0CC1988699D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65E74E13-9908-49A0-8297-B0CC1988699D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65E74E13-9908-49A0-8297-B0CC1988699D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15969E2C-F786-4295-AF2F-21D7176AEF55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15969E2C-F786-4295-AF2F-21D7176AEF55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15969E2C-F786-4295-AF2F-21D7176AEF55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15969E2C-F786-4295-AF2F-21D7176AEF55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

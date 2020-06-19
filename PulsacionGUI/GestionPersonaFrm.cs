@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
 using Entity;
-namespace PulsacionesGUI
+namespace PulsacionGUI
 {
-    public partial class RegistroPersonaFrm : Form
+    public partial class GestionPersonaFrm : Form
     {
-        PersonaService personaService = new PersonaService();
-        public RegistroPersonaFrm()
+        PersonaService personaService; 
+        public GestionPersonaFrm()
         {
+            personaService = new PersonaService();
             InitializeComponent();
         }
 
@@ -24,12 +25,18 @@ namespace PulsacionesGUI
             Persona persona = new Persona();
             persona.Identificacion = IdentificacionTxt.Text;
             persona.Nombre = NombreTxt.Text;
-            persona.Edad =int.Parse(EdadTxt.Text);
+            persona.Edad =int.Parse( EdadTxt.Text);
             persona.Sexo = SexoCmb.Text;
             persona.CalcularPulsacion();
             PulsacionTxt.Text = persona.Pulsacion.ToString();
-            string mensaje=personaService.Guardar(persona);
-            MessageBox.Show(mensaje);
+            string mensaje= personaService.Guardar(persona);
+            MessageBox.Show(mensaje,"Mensaje al Guardar",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+        }
+
+        private void EliminarBtn_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

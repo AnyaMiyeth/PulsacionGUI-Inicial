@@ -10,7 +10,7 @@ namespace DAL
     public class PersonaRepository
     {
         private string ruta = @"Persona.txt";
-        private List<Persona> personas;
+        private IList<Persona> personas;
         public PersonaRepository()
         {
             personas = new List<Persona>();
@@ -26,7 +26,7 @@ namespace DAL
             
         }
 
-        public List<Persona> Consultar()
+        public IList<Persona> Consultar()
         {
             personas.Clear();
             
@@ -88,17 +88,39 @@ namespace DAL
 
         public Persona Buscar(string identificacion) 
         {
-            personas.Clear();
-            personas = Consultar();
-            Persona persona = new Persona();
-            foreach (var item in personas)
-            {
-                if (item.Identificacion.Equals(identificacion))
-                {
-                    return item;
-                }
-            }
-            return null;
+           personas = Consultar();
+           return personas.Where(p => p.Identificacion == identificacion).FirstOrDefault();
+          
         }
+
+
+        public IList<Persona> BuscarContiene(string identificacion)
+        {
+            personas = Consultar();
+
+            return personas.Where(p=>p.Identificacion.Contains(identificacion)).ToList();
+        }
+
+        public int TotalPersonas()
+        {
+            personas = Consultar();
+            return  personas.Count();
+        }
+
+
+        public int TotalporTipo(string tipo)
+        {
+            personas = Consultar();
+            return personas.Count(p=>p.Sexo.Equals(tipo));
+        }
+
+        public IList<Persona> ListarPorTipo(string tipo)
+        {
+            personas = Consultar();
+            return personas.Where(p => p.Sexo.Equals(tipo)).ToList();
+        }
+
+      
+
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // La información general de un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("PulsacionesGUI")]
+[assembly: AssemblyTitle("PulsacionGUI")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PulsacionesGUI")]
+[assembly: AssemblyProduct("PulsacionGUI")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("65e74e13-9908-49a0-8297-b0cc1988699d")]
+[assembly: Guid("15969e2c-f786-4295-af2f-21d7176aef55")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PulsacionesGUI
+namespace PulsacionGUI
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace PulsacionesGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PrincipalFrm());
+            Application.Run(new Form1());
         }
     }
 }

@@ -136,6 +136,50 @@ namespace BLL
 
         }
 
+
+
+         public IList<Persona> BuscarContiene(string identificacion)
+        {
+            return personaRepository.BuscarContiene(identificacion);
+        }
+
+        public int TotalPersonas()
+        {
+            
+            return personaRepository.TotalPersonas();
+        }
+
+
+        public int TotalporTipo(string tipo)
+        {
+            return personaRepository.TotalporTipo(tipo);
+        }
+
+        public RespuestaListaTipo ListarPorTipo(string tipo)
+        {
+
+            RespuestaListaTipo respuesta = new RespuestaListaTipo();
+            try
+            {
+                respuesta.Personas= personaRepository.ListarPorTipo(tipo);
+                if (respuesta.Personas.Count==0)
+                {
+                    respuesta.Mensaje = "No hay datos en el archivo";
+                }
+                else
+                {
+                    respuesta.Mensaje = "Datos Consultados correctamente";
+                }
+                return respuesta;
+            }
+            catch (Exception e)
+            {
+                respuesta.Mensaje = "Erro de Archivo"+e.Message;
+                return respuesta;
+            }
+           
+        }
+
     }
 
 
@@ -151,8 +195,14 @@ namespace BLL
     public class RespuestaConsulta
     {
         public string Mensaje { get; set; }
-        public List<Persona> Personas { get; set; }
+        public IList<Persona> Personas { get; set; }
         public bool Error { get; set; }
+    }
+
+    public class RespuestaListaTipo 
+    {
+        public IList<Persona> Personas { get; set; }
+        public string Mensaje { get; set; }
     }
 
 
